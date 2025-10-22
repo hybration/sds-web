@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Solace Data Solutions</title>
+  <meta name="description" content="Get in touch with Solace Data Solutions for expert web design, and data entry services. Let's bring your ideas to life." />
+  <meta name="keywords" content="contact web design company, contact Solace Data Solutions, data entry support" />
+  <meta name="author" content="Solace Data Solutions" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="Images/favicon.webp" type="image/webp" />
+  
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="glass-header">
+    <div class="logo-container">
+      <img src="Images/logo.webp" alt="Solace Data Solutions Logo" class="logo-img">
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+  <h2 class="section-title">Get in Touch</h2>
+  <form action="https://formspree.io/f/xgvkegrk" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit" class="glitch-button">Send Message</button>
+    <p id="form-success" style="display: none; color: #0f0; margin-top: 1rem;">Message sent successfully!</p>
+  </form>
+</section>
+
+<script>
+  const form = document.querySelector(".contact-form");
+  const successMessage = document.getElementById("form-success");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        successMessage.style.display = "block";
+        form.reset();
+      }
+    });
+  });
+</script>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Solace Data Solutions. All rights reserved.</p>
+    <div class="socials">
+  <a href="https://x.com/data_solace" target="_blank" aria-label="Follow us on X">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+  <a href="https://www.instagram.com/data_solace" target="_blank" aria-label="Follow us on Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/mubarak-abubakre-546502361?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="Connect with us on LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://wa.me/2349124715052" target="_blank" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+  </footer>
+
+</body>
+</html>
