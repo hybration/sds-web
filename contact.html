@@ -2,58 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Solace Data Solutions</title>
-
   <!-- Meta Description -->
   <meta name="description" content="Contact Solace Data Solutions for expert web design, website maintenance, and data entry services in Nigeria. Let's bring your digital vision to life." />
-
   <!-- Keywords -->
   <meta name="keywords" content="contact Solace Data Solutions, web design contact, website maintenance Nigeria, data entry services, digital solutions support" />
-
   <!-- Author -->
   <meta name="author" content="Solace Data Solutions" />
-
   <!-- Canonical -->
   <link rel="canonical" href="https://solacedatasolutions.com.ng/contact.html" />
-
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Contact Solace Data Solutions" />
   <meta property="og:description" content="Reach out to Solace Data Solutions for web design, website maintenance, and data entry services tailored to your business goals." />
   <meta property="og:image" content="https://solacedatasolutions.com.ng/Images/preview.jpg" />
   <meta property="og:url" content="https://solacedatasolutions.com.ng/contact.html" />
   <meta property="og:type" content="website" />
-
   <!-- Twitter Card Meta -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact Solace Data Solutions" />
   <meta name="twitter:description" content="Get in touch with our team for custom web design and digital services." />
   <meta name="twitter:image" content="https://solacedatasolutions.com.ng/Images/preview.jpg" />
-
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="https://solacedatasolutions.com.ng/Images/favicon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="https://solacedatasolutions.com.ng/Images/favicon.png">
-<link rel="apple-touch-icon" href="https://solacedatasolutions.com.ng/Images/favicon.png">
-<link rel="icon" href="https://solacedatasolutions.com.ng/favicon.ico" type="image/x-icon">
-
+  <link rel="icon" type="image/png" sizes="192x192" href="https://solacedatasolutions.com.ng/Images/favicon.png">
+  <link rel="apple-touch-icon" href="https://solacedatasolutions.com.ng/Images/favicon.png">
+  <link rel="icon" href="https://solacedatasolutions.com.ng/favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S5HCMPHZ6S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S5HCMPHZ6S">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-S5HCMPHZ6S');
-</script>
-
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-S5HCMPHZ6S');
+  </script>
   <!-- Styles and Fonts -->
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script defer src="script.js"></script>
+  <script defer src="script.js">
+  </script>
 </head>
 <body>
-
   <!-- Header -->
   <header class="glass-header">
     <div class="logo-container">
@@ -71,54 +65,58 @@
 
   <!-- Contact Section -->
   <section class="contact-section">
-  <h2 class="section-title">Get in Touch</h2>
-  <form action="https://formspree.io/f/xgvkegrk" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit" class="glitch-button">Send Message</button>
-    <p id="form-success" style="display: none; color: #0f0; margin-top: 1rem;">Message sent successfully!</p>
-  </form>
-</section>
-
-<script>
-  const form = document.querySelector(".contact-form");
-  const successMessage = document.getElementById("form-success");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        successMessage.style.display = "block";
-        form.reset();
-      }
+    <h2 class="section-title">Get in Touch</h2>
+    <form action="https://formspree.io/f/xgvkegrk" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required>
+</textarea>
+      <button type="submit" class="glitch-button">Send Message</button>
+      <p id="form-success" style="display: none; color: #0f0; margin-top: 1rem;">Message sent successfully!</p>
+    </form>
+  </section>
+  <script>
+    const form = document.querySelector(".contact-form");
+    const successMessage = document.getElementById("form-success");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          successMessage.style.display = "block";
+          form.reset();
+        }
+      });
     });
-  });
-</script>
+  </script>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 Solace Data Solutions. All rights reserved.</p>
     <div class="socials">
-  <a href="https://x.com/data_solace" target="_blank" aria-label="Follow us on X">
-    <i class="fab fa-x-twitter"></i>
-  </a>
-  <a href="https://www.instagram.com/data_solace" target="_blank" aria-label="Follow us on Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/mubarak-abubakre-546502361?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="Connect with us on LinkedIn">
-    <i class="fab fa-linkedin"></i>
-  </a>
-  <a href="https://wa.me/2349124715052" target="_blank" aria-label="Chat with us on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</div>
+      <a href="https://x.com/data_solace" target="_blank" aria-label="Follow us on X">
+        <i class="fab fa-x-twitter">
+        </i>
+      </a>
+      <a href="https://www.instagram.com/data_solace" target="_blank" aria-label="Follow us on Instagram">
+        <i class="fab fa-instagram">
+        </i>
+      </a>
+      <a href="https://www.linkedin.com/in/mubarak-abubakre-546502361?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="Connect with us on LinkedIn">
+        <i class="fab fa-linkedin">
+        </i>
+      </a>
+      <a href="https://wa.me/2349124715052" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp">
+        </i>
+      </a>
+    </div>
   </footer>
-
 </body>
 </html>
