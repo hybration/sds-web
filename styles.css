@@ -629,11 +629,11 @@ h3 {
 
 /* Individual card colors */
 .whatsapp i {
-    color: #25d366;
+    color: #37f07b;
 }
 
 .whatsapp:hover {
-    border-color: #25d366;
+    border-color: #32df71;
     box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
 }
 
